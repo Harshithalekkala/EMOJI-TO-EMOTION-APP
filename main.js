@@ -25,13 +25,13 @@ function modelLoaded() {
 function speak() {
     var synth=window.speechSynthesis;
     speak_data_1="the first prediction is" + prediction_1;
-    speak_data_1="And the second prediction is" + prediction_2;
-    var utterThis = new speechSynthesisUtterance(speak_data_1+speak_data_2);
+    speak_data_2="And the second prediction is" + prediction_2;
+    var utterThis = new SpeechSynthesisUtterance(speak_data_1+speak_data_2);
     synth.speak(utterThis);
 }
 
 function check() {
-   img=document.getElementById('capture_image') ;
+   img=document.getElementById('captured_image') ;
    classifier.classify(img, gotResult);
 }
 
